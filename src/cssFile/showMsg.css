@@ -1,0 +1,64 @@
+.showmsg,
+.showmsg>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.showmsg {
+    cursor: pointer;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.836);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.showmsg>div {
+    user-select: none;
+    overflow: hidden;
+    cursor: default;
+    text-align: center;
+    width: calc(90% - 60px);
+    max-width: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    min-height: 130px;
+    padding: 30px;
+    gap: 5px;
+    font-size: 17px;
+    color: rgb(77, 77, 77);
+    justify-content: space-around;
+    animation: zooz .5s ease-in-out;
+
+}
+
+@keyframes zooz {
+    0% {
+        scale: .0;
+    }
+
+    80% {
+        scale: 1.1;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+.showmsg>div>div {
+    user-select: none;
+    cursor: pointer;
+    padding: 5px 15px 8px 15px;
+    border-radius: 10px;
+    background-color: rgb(0, 136, 255);
+    color: white;
+}
+
+.showmsg>div>div:hover {
+    opacity: .8;
+}

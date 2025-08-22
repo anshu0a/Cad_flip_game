@@ -1,0 +1,59 @@
+.flipmain,
+.flipmain>.topur,
+.flipmain>.bdyflip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flipmain {
+    position: relative;
+    padding: 20px;
+    width: calc(100% - 40px);
+    min-height: calc(100vh - 40px);
+    background-image: url("/img/flip.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.flipmain>.topur{
+    width:calc(100% - 20px);
+    padding:20px 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top:0;
+}
+.flipmain>.topur>p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin:0;
+    font-size: 20px;
+    color:white;
+}
+.flipmain>.topur>svg{
+    width:20px;
+    border-radius: 5px;
+    padding:5px;
+}
+.flipmain>.topur>svg:hover{
+    background-color: rgba(34, 34, 34, 0.385);
+}
+.flipmain>.bdyflip{
+    width:100%;
+    gap:2px;
+}
+.flipmain>.bdyflip>p{
+    cursor: pointer;
+    margin:0;
+    background-color: rgba(29, 29, 29, 0.483);
+    font-size: 20px;
+    width:100%;
+    max-width: 400px;
+    text-align: center;
+    color:white;
+    padding:15px 0;
+    border-radius: 10px;
+}
+.flipmain>.bdyflip>p:hover{
+    background-color: rgba(0, 0, 0, 0.673);
+}

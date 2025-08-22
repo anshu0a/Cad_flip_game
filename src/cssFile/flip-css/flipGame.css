@@ -1,0 +1,96 @@
+.flipgame,
+.flipgame>.topx,
+.flipgame>.crdprt>.crd>.imgdiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flipgame {
+    position: relative;
+    color: white;
+    padding: 20px;
+    width: calc(100% - 40px);
+    min-height: calc(100vh - 40px);
+    background-image: url("https://res.cloudinary.com/dwqigzdpw/image/upload/v1754890646/i1_cq0ygh.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.flipgame>.topx {
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(100% - 20px);
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.flipgame>.topx>svg {
+    width: 17px;
+    padding: 10px;
+    aspect-ratio: 1/1;
+    background-color: rgba(58, 58, 58, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.flipgame>.topx>svg:hover {
+    background-color: rgba(58, 58, 58, 0.5);
+}
+
+.flipgame>.crdprt {
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+    width: calc(100% - 20px);
+    min-height: calc(100vh - 75px);
+    margin-top: 35px;
+}
+
+
+.flipgame>.crdprt>.crd {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.flipgame>.crdprt>.crd>.imgdiv {
+    background-color: rgb(255, 255, 255);
+    transition: .3s ease;
+    width: 85%;
+    height: 90%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    backface-visibility: hidden;
+
+}
+
+.flipgame>.crdprt>.crd>.imgdiv:hover {
+    width: 100%;
+    height: 100%;
+}
+
+.flipgame>.crdprt>.crd>.imgdiv>img {
+    width: 70%;
+    height: 80%;
+}
+
+.flipgame>.crdprt>.crd>.crdf {
+    transform: rotateY(180deg)
+}
+
+.flipgame>.crdprt>.clickflip>.crdb {
+    transform: rotateY(180deg)
+}
+
+.flipgame>.crdprt>.clickflip>.crdf {
+    transform: rotateY(360deg)
+}
